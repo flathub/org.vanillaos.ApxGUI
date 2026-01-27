@@ -18,15 +18,17 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/golang/bin
-      env:
-        GOBIN: /app/bin
     build-commands:
-      - go install -mod=vendor
+      - go build -o /app/bin/apx -mod=vendor ./cmd
     sources:
       - type: git
         url: https://github.com/Vanilla-OS/apx.git
-        tag: v2.5.0
-        commit: ac65627cfa279c39ff85f5feb95cb1ab3e821442
+        tag: v3.0.1
+        commit: 4927bae852e62607c0c1bde11b442744b19644b5
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Vanilla-OS/apx/releases/latest
+          tag-query: .tag_name
       - go.mod.yml
 
   - name: apx-configs
@@ -39,8 +41,12 @@ modules:
         url: https://github.com/Vanilla-OS/vanilla-apx-configs.git
         tag: v1.0.0
         commit: 691d7c737b0fff095f81adfca4736aecc318beaa
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Vanilla-OS/vanilla-apx-configs/releases/latest
+          tag-query: .tag_name
       - type: file
-        path: apx.json
+        path: config.json
 
   - name: fast_float
     buildsystem: cmake-ninja
@@ -49,6 +55,10 @@ modules:
         url: https://github.com/fastfloat/fast_float.git
         tag: v8.2.2
         commit: 97b54ca9e75f5303507699d27c6b4f4efe4641a1
+        x-checker-data:
+          type: anitya
+          project-id: 214353
+          tag-template: v$version
 
   - name: simdutf
     buildsystem: cmake-ninja
@@ -57,6 +67,10 @@ modules:
         url: https://github.com/simdutf/simdutf.git
         tag: v7.7.1
         commit: 98218fc47232b57dda64191b0204c25c09984f03
+        x-checker-data:
+          type: anitya
+          project-id: 378662
+          tag-template: v$version
 
   - name: vte
     buildsystem: meson
@@ -66,10 +80,12 @@ modules:
       - -Dgtk3=false
       - -Dvapi=false
     sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/vte.git
-        tag: 0.82.3
-        commit: 18fca6d0a124c2d0fb87293306626db1d5ba8ebc
+      - type: archive
+        url: https://download.gnome.org/sources/vte/0.82/vte-0.82.3.tar.xz
+        sha256: 6dc6278f6fee30d07d1a03e2ba3335b1ea4e8d2956ceb59d861943115d930a85
+        x-checker-data:
+          type: gnome
+          name: vte
 
   - python3-requests.json
 
@@ -82,3 +98,7 @@ modules:
         url: https://github.com/Vanilla-OS/apx-gui.git
         tag: v1.0.6
         commit: b2bc5af45c70cbdfd361a7271dfa200d9a383bdf
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Vanilla-OS/apx-gui/releases/latest
+          tag-query: .tag_name

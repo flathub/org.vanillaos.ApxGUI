@@ -18,15 +18,13 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/golang/bin
-      env:
-        GOBIN: /app/bin
     build-commands:
-      - go install -mod=vendor
+      - go build -o /app/bin/apx -mod=vendor ./cmd
     sources:
       - type: git
         url: https://github.com/Vanilla-OS/apx.git
-        tag: v2.5.0
-        commit: ac65627cfa279c39ff85f5feb95cb1ab3e821442
+        tag: v3.0.1
+        commit: 4927bae852e62607c0c1bde11b442744b19644b5
       - go.mod.yml
 
   - name: apx-configs
@@ -40,7 +38,7 @@ modules:
         tag: v1.0.0
         commit: 691d7c737b0fff095f81adfca4736aecc318beaa
       - type: file
-        path: apx.json
+        path: config.json
 
   - name: fast_float
     buildsystem: cmake-ninja

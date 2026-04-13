@@ -94,7 +94,7 @@ github.com/robfig/cron/v3
 github.com/sahilm/fuzzy
 # github.com/stretchr/testify v1.11.1
 ## explicit; go 1.17
-# github.com/vanilla-os/sdk v0.0.0-20260121134003-7795e641c7d6
+# github.com/vanilla-os/sdk v0.0.0-20260125180913-308d9916c100
 ## explicit; go 1.24.0
 github.com/vanilla-os/sdk/pkg/v1/app
 github.com/vanilla-os/sdk/pkg/v1/app/types

@@ -8,10 +8,10 @@
   type: archive
   url: https://proxy.golang.org/github.com/google/uuid/@v/v1.6.0.zip
 - dest: vendor/github.com/vanilla-os/sdk
-  sha256: 392611c170213051bd9d0b99ac6de671368edbecce9cf95a6e22d45a2c8ea768
+  sha256: ebc27b3917fb6cbd72176b1f04e8c8cc532444faa08ab8158375dd6f068a9ef4
   strip-components: 3
   type: archive
-  url: https://proxy.golang.org/github.com/vanilla-os/sdk/@v/v0.0.0-20260121134003-7795e641c7d6.zip
+  url: https://proxy.golang.org/github.com/vanilla-os/sdk/@v/v0.0.0-20260125180913-308d9916c100.zip
 - dest: vendor/gopkg.in/yaml.v2
   sha256: ede49e27c4cca6cdd2ec719aed8ea4d363710cceb3d411e7a786fbdec0d391fd
   strip-components: 2

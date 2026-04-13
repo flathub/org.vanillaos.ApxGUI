@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Vanilla-OS/apx.git
-        tag: v3.0.1
-        commit: 4927bae852e62607c0c1bde11b442744b19644b5
+        tag: v3.1.0
+        commit: a2ef18d74b47c4040571e4ff7f87b1ceae037ba9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Vanilla-OS/apx/releases/latest

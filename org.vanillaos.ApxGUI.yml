@@ -13,6 +13,9 @@ finish-args:
   - --device=dri
   - --filesystem=xdg-run/podman:ro
   - --talk-name=org.freedesktop.Flatpak
+cleanup:
+  - '*.a'
+  - /include
 
 modules:
   - name: apx
@@ -51,6 +54,8 @@ modules:
 
   - name: fast_float
     buildsystem: cmake-ninja
+    cleanup:
+      - /share
     sources:
       - type: git
         url: https://github.com/fastfloat/fast_float.git
@@ -63,6 +68,8 @@ modules:
 
   - name: simdutf
     buildsystem: cmake-ninja
+    cleanup:
+      - /lib/cmake
     sources:
       - type: git
         url: https://github.com/simdutf/simdutf.git
@@ -75,6 +82,8 @@ modules:
 
   - name: vte
     buildsystem: meson
+    cleanup:
+      - /share
     config-opts:
       - -Dapp=false
       - -Dglade=false

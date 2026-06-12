@@ -59,8 +59,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fastfloat/fast_float.git
-        tag: v8.2.8
-        commit: e8ec8e8f34bd6142efdbf4c714734dcff51ea9ac
+        tag: v8.2.9
+        commit: 8234a896236a6c98ee66cf214b31ca15e24579ca
         x-checker-data:
           type: anitya
           project-id: 214353

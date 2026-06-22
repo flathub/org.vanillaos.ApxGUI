@@ -43,8 +43,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Vanilla-OS/vanilla-apx-configs.git
-        tag: v1.1.0
-        commit: 9c52b9e7436948dc464ac5d5aac02dd3e4944ff1
+        tag: v1.1.1
+        commit: 1a37e751e7326da7b26ccf6c76dd46999efc2166
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Vanilla-OS/vanilla-apx-configs/releases/latest

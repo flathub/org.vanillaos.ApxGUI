@@ -73,8 +73,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/simdutf/simdutf.git
-        tag: v9.4.0
-        commit: 358e33c97848dda568c5b113e1be6acb8d63dfb9
+        tag: v9.5.0
+        commit: 9064366fa571fac03bcd28db35af597e97fba842
         x-checker-data:
           type: anitya
           project-id: 378662
